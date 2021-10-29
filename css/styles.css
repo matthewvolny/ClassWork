@@ -1,0 +1,77 @@
+p {
+  width: 100px;
+  margin: auto 0;
+  color: green;
+}
+
+div {
+  font-weight: bold;
+}
+
+#imageShufflerButton {
+  border-radius: 50;
+  border: solid 5px;
+  box-shadow: 5px 5px;
+}
+/*cannot change squares to inline for some reason */
+#squares {
+  display: inline;
+}
+
+#redsquare {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  margin: 20px 20px 20px 0px;
+  border: 2px solid white;
+}
+#greensquare {
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  margin: 20px 20px 20px 0px;
+}
+#yellowsquare {
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  margin: 20px 20px 20px 0px;
+}
+#bluesquare {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+#color-button {
+  color: rgb(160, 60, 200);
+}
+
+.circle {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#redCircle {
+  background-color: red;
+}
+
+#blueCircle {
+  background-color: blue;
+}
+
+#yellowCircle {
+  background-color: yellow;
+}
+
+#greenCircle {
+  background-color: green;
+}
