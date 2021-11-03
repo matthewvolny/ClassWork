@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #yellowsquare {
+        position: relative;
+        top: 200px;
+        left: 200px;
+        width: 50px;
+        height: 50px;
+        background-color: yellow;
+        margin: 20px 20px 20px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="yellowsquare">yellow</div>
+    <script>
+      today.getHours();
+
+      //make yellow block change size on a keyboard click - does not work
+
+      let yellowSquare = document.getElementById("yellowsquare");
+
+      let increaseSize = () => {
+        console.log("key pressed");
+        yellowSquare.style.width = "100px";
+      };
+
+      let decreaseSize = () => {
+        yellowSquare.style.width = "25px";
+      };
+
+      //yellowSquare.addEventListener("keydown", increaseSize);
+      document.addEventListener("keydown", increaseSize);
+      //yellowSquare.addEventListener("keyup", decreaseSize);
+      document.addEventListener("keyup", decreaseSize);
+    </script>
+  </body>
+</html>

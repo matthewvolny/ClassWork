@@ -1,5 +1,4 @@
-// Lets check all days of the week using FOR Loop
-// Use the same variables from the other exercise
+
 let myFriendsSchedule {
 sunday: true,
 monday: false,
@@ -9,7 +8,7 @@ thursday: true,
 friday: false,
 saturday: false
 }
-// Create an object called myMoneySchedule that has how much money I have during the week the key/value pair should be day_of_week and a number value i.e. { sunday: 10 }
+
 let myMoneySchedule {
 sunday: 10,
 monday: 5,

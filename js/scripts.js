@@ -173,5 +173,26 @@ let currentColor;
 
 while (currentColor != "red") {
   currentColor = colors[Math.floor(Math.random() * 4)];
-  document.write(currentColor); //how to have this output with a style
+  document./*querySelector("h2") */ write(currentColor); //how to have this output with a style ,and overwrite h2
 }
+
+//playing with parentNode, previousSibling, nextSibling, firstChild
+
+let parentElement = document.getElementById("parentElement");
+let one = document.getElementById("one");
+let two = document.getElementById("two");
+let three = document.getElementById("three");
+
+//each of these sets of two works below to target elements within an HTML document:
+
+//one.parentNode.textContent = "I am the parent";
+//document.getElementById("one").parentNode.textContent = "i am the parent";
+
+//document.getElementById("two").previousSibling.textContent = "i am the previous sibling";
+//two.previousElementSibling.textContent = "i am the previous sibling";
+
+//document.getElementById("two").nextSibling.textContent = "i am the next sibling";
+two.nextElementSibling.textContent = "i am the next sibling";
+
+//document.getElementById("parentElement").firstElementChild.textContent = "i am the first child";
+//parentElement.firstElementChild.textContent = "I am the first child";
