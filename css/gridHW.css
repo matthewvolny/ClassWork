@@ -1,0 +1,95 @@
+body {
+  background-color: #b3d5b7;
+  margin: 0px;
+}
+
+.score {
+  color: white;
+  font-family: monospace;
+  background-color: black;
+  font-size: 35px;
+  text-indent: 70%;
+  line-height: 48px;
+}
+
+.grid {
+  display: grid;
+  margin: 35px 35px 0px 35px;
+  grid-template-rows: 40px repeat(8, 1fr) 20px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0.05px;
+}
+.grid > div {
+  border: 2px solid black;
+}
+
+.box {
+  height: 40px;
+}
+.red {
+  background-color: #e9080d;
+}
+
+.yellow {
+  background-color: #faff07;
+}
+
+.green {
+  background-color: #0e7301;
+}
+
+.blue {
+  background-color: #1c00fb;
+}
+
+.background {
+  grid-column: 1 / 13;
+  height: 500px;
+  background-color: black;
+}
+
+.top-blank {
+  grid-column: 1 / 13;
+  height: 40px;
+  background-color: black;
+}
+
+.blank {
+  background-color: black;
+}
+
+.paddle {
+  width: 200px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 900px;
+  left: 40%;
+}
+
+.ball {
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 700px;
+  left: 15%;
+}
+
+.lefteye {
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 255px;
+  left: 20%;
+}
+
+.righteye {
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 255px;
+  left: 67%;
+}
