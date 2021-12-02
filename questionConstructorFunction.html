@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const MakeQuestion = function (question, answer) {
+        this.question = question;
+        this.answer = answer;
+        this.options = [];
+        this.addOptions = function (x, y, z) {
+          this.options.push(x);
+          this.options.push(y);
+          this.options.push(z);
+        };
+      };
+
+      let question = new MakeQuestion("Where should I check?", "under the bed");
+
+      console.log(question);
+      question.addOptions("behind the mirror", "outside", "on the shelf");
+      console.log(question.options);
+    </script>
+  </body>
+</html>

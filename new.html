@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<title>Example</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+  }
+  #main {
+    display: flex;
+  }
+
+  #main > article {
+    background-color: greenyellow;
+  }
+  #main > nav,
+  #main > aside {
+    background-color: beige;
+  }
+  #main > nav {
+  }
+  header,
+  footer {
+    background: yellowgreen;
+  }
+  header,
+  footer,
+  article,
+  nav,
+  aside {
+    padding: 1em;
+  }
+</style>
+<body>
+  <header>Header</header>
+  <div id="main">
+    <article>Article</article>
+    <nav>Nav</nav>
+    <aside>Aside</aside>
+  </div>
+  <footer>Footer</footer>
+</body>

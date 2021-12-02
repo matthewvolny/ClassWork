@@ -1,0 +1,15 @@
+html {
+  line-height: 1.2;
+  /* font-size: calc(0.7em + 1vw); */
+  font-size: 1.1rem;
+}
+
+.test {
+  font-size: 1rem; /*will scale with root font-size*/
+  border: 1px dotted sienna;
+  padding: 1em; /*will scale with root/element font-size*/
+  margin: 1em; /*will scale with root/element font-size*/
+  border-radius: 1em;
+  /* width: 25em; */
+  width: 50vmin;
+}

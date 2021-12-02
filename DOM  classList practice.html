@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .redbox {
+        background: red;
+        padding: 1em;
+        width: 3em;
+      }
+
+      .greenbox {
+        background: green;
+        padding: 1em;
+        width: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="redbox">red</div>
+    <div class="sidebar">
+      <ul class="locations"></ul>
+    </div>
+    <script>
+      let locations = document.querySelector(".locations");
+      let firstLocation = document.createElement("li");
+      firstLocation.setAttribute("id", "firstLocation"); //.id vs .className vs. classList.add
+      firstLocation.innerHTML = "<h3>Cancun, Mexico</h1>";
+      //firstLocation.innerHTML = "Cancun, Mexico";
+      locations.appendChild(firstLocation);
+      console.log(locations.childElementCount); //can be used with conditional statements
+
+      //   let redBox = document.querySelector(".redbox");
+      //   //replacing a CSS class
+      //   redBox.classList.replace("redbox", "greenbox");
+
+      //   //adding a CSS class (+ removing a CSS class)
+      //   redBox.classList.add("greenbox");
+      //   redBox.classList.remove("redbox");
+
+      //   //toggle on and off CSS class designations with a button click
+      //   redBox.addEventListener("click", (e) => {
+      //     redBox.classList.toggle("greenbox");
+      //   });
+      //   //toggle on and off CSS class designations with a button click AND if a condition is met)
+      //   let array = [3, 5, 26, 4];
+      //   redBox.addEventListener("click", (e) => {
+      //     redBox.classList.toggle("greenbox", array.length > 2);
+      //     array.pop(); // changes back to red on the third click
+      //     console.log(array); // [3, 5]
+      //   });
+    </script>
+  </body>
+</html>

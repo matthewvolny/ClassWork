@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: lightblue;
+    }
+    .container {
+      display: flex;
+      height: 40vh;
+      width: 85vw;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: space-around;
+      background-color: lightblue;
+    }
+    .keyA,
+    .keyS,
+    .keyD,
+    .keyF,
+    .keyG,
+    .keyH {
+      background-color: khaki;
+      width: 75px;
+      height: 75px;
+      transition: all 0.5s;
+      margin: 5px;
+      border: solid 2px lightgoldenrodyellow;
+      border-radius: 5px;
+    }
+
+    .playing {
+      transform: scale(1.2);
+      border-color: plum;
+      box-shadow: 0 0 10px grey;
+      background-image: url("./assets/cat.jpg");
+      background-position: 50% 25%;
+      background-size: cover;
+    }
+
+    .keyA {
+      background-image: url("./assets/cat.jpg");
+      background-position: 50% 25%;
+      background-size: cover;
+    }
+    .keyS {
+      background-image: url("./assets/chicken.jpg");
+      background-position: 50% 25%;
+      background-size: cover;
+    }
+    .keyD {
+      background-image: url("./assets/dog.jpg");
+      background-position: 50% 25%;
+      background-size: cover;
+    }
+    .keyF {
+      background-image: url("./assets/horse.jpg");
+      background-position: 50% 25%;
+      background-size: cover;
+    }
+    .keyG {
+      background-image: url("./assets/pig.jpg");
+      background-position: 50% 25%;
+      background-size: cover;
+    }
+    .keyH {
+      background-image: url("./assets/giraffe.jpg");
+      background-position: 50% 25%;
+      background-size: cover;
+    }
+
+    .title {
+      width: 85vw;
+      margin: 0 auto;
+      text-align: center;
+      background-color: lightgoldenrodyellow;
+      border-radius: 15px;
+      font-family: "Nunito", sans-serif;
+    }
+  </style>
+  <body>
+    <div class="title">
+      <h1>What sound does the ... make?</h1>
+    </div>
+    <div class="container">
+      <div data-key="65" class="keyA"></div>
+      <div data-key="83" class="keyS"></div>
+      <div data-key="68" class="keyD"></div>
+      <div data-key="70" class="keyF"></div>
+      <div data-key="71" class="keyG"></div>
+      <div data-key="72" class="keyH"></div>
+    </div>
+    <audio
+      id="cat"
+      data-key="65"
+      src="./assets/054573498-cartoon-lonely-cat-[AudioTrimmer.com].m4a"
+      type="audio/mp3"
+    ></audio>
+    <audio
+      data-key="83"
+      src="./assets/054573498-cartoon-lonely-cat-[AudioTrimmer.com].m4a"
+      type="audio/mp3"
+    ></audio>
+    <audio
+      data-key="68"
+      src="./assets/054573498-cartoon-lonely-cat-[AudioTrimmer.com].m4a"
+      type="audio/mp3"
+    ></audio>
+    <audio
+      data-key="70"
+      src="./assets/054573498-cartoon-lonely-cat-[AudioTrimmer.com].m4a"
+      type="audio/mp3"
+    ></audio>
+    <audio
+      data-key="71"
+      src="./assets/054573498-cartoon-lonely-cat-[AudioTrimmer.com].m4a"
+      type="audio/mp3"
+    ></audio>
+    <audio
+      data-key="72"
+      src="./assets/054573498-cartoon-lonely-cat-[AudioTrimmer.com].m4a"
+      type="audio/mp3"
+    ></audio>
+    <script>
+      document.addEventListener("keydown", function (e) {
+        const catAudio = document.getElementById("cat");
+        const catImage = document.querySelector("div.keyA");
+        if (e.keyCode === 65) {
+          catAudio.play();
+          catAudio.currentTime = 0;
+          catImage.className = "keyA playing";
+        } else if (e.keyCode === 83) {
+          catAudio.play();
+          catAudio.currentTime = 0;
+          document.querySelector("div.keyS").className = "keyS playing";
+        } else if (e.keyCode === 68) {
+          catAudio.play();
+          catAudio.currentTime = 0;
+          document.querySelector("div.keyD").className = "keyD playing";
+        } else if (e.keyCode === 70) {
+          catAudio.play();
+          catAudio.currentTime = 0;
+          document.querySelector("div.keyF").className = "keyF playing";
+        } else if (e.keyCode === 71) {
+          catAudio.play();
+          catAudio.currentTime = 0;
+          document.querySelector("div.keyG").className = "keyG playing";
+        } else if (e.keyCode === 72) {
+          catAudio.play();
+          catAudio.currentTime = 0;
+          document.querySelector("div.keyH").className = "keyH playing";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        line-height: 1.2;
+        /* font-size: calc(0.7em + 1vw); */
+        font-size: 1rem;
+        box-sizing: border-box;
+      }
+
+      *,
+      ::before,
+      ::after {
+        box-sizing: inherit;
+      }
+
+      .title {
+        font-size: 1.2rem; /*will scale with root font-size*/
+        border: 1px dotted sienna;
+        padding: 1em; /*will scale with root/element font-size*/
+        margin: 1em; /*will scale with root/element font-size*/
+        border-radius: 1em;
+        /* width: 25em; */
+        width: 50vmin;
+      }
+
+      .msg {
+        font-size: 1.1rem;
+        border: 1px dotted springgreen;
+        padding: 1em;
+        margin: 1em;
+        border-radius: 1em;
+        overflow: auto; /*scroll bar appears if content overflows*/
+        height: 50vmin;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">Build your Character</div>
+    <form action="">
+      <label for="first-name">What is your first name?</label>
+      <input type="text" id="first-name" name="first-name" />
+      <br />
+      <label for="job">What is your job?</label>
+      <input type="text" id="job" name="job" />
+      <br />
+      <label for="age">What is your age?</label>
+      <input type="text" id="age" name="age" />
+      <br />
+      <button>Create character</button>
+    </form>
+    <br />
+    <div class="msg">Character Info</div>
+    <script>
+      let firstName = document.getElementById("first-name");
+      let job = document.getElementById("job");
+      let age = document.getElementById("age");
+      let button = document.querySelector("button");
+      let msg = document.querySelector(".msg");
+
+      let characters = [];
+
+      //constructor function for building characters
+      let PeopleMaker = function (firstName, job, age) {
+        this.firstName = firstName;
+        this.job = job;
+        this.age = age;
+        this.greeting = function () {
+          return console.log(`hello, i am ${this.firstName}`);
+        };
+      };
+
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        let newCharacter = new PeopleMaker(
+          firstName.value,
+          job.value,
+          age.value
+        );
+        console.log(newCharacter);
+        characters.push(newCharacter);
+        console.log(characters);
+        console.log(characters[0].firstName);
+        msg.innerHTML = "Welcome ";
+        characters.forEach((character) => {
+          console.log(character.firstName);
+          msg.innerHTML += character.firstName;
+        });
+      });
+    </script>
+  </body>
+</html>

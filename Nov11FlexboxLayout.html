@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0px;
+      }
+
+      .top-bottom-flex {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .left-right-flex {
+        display: flex;
+        flex-direction: row;
+        height: 75vh;
+      }
+
+      header {
+        display: flex;
+        flex-direction: row;
+        background-color: #f5e1da;
+        height: 15vh;
+        margin: 0px 0px 5px 0px;
+      }
+
+      .frank-header {
+        max-height: 100%;
+        width: 50%;
+        object-fit: cover;
+        vertical-align: bottom;
+      }
+      /*title Meet Frank! */
+      header > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        background-color: #f5e1da;
+      }
+
+      aside {
+        background-color: #085f63;
+        display: flex;
+        text-align: center;
+        color: white;
+        width: 30%;
+        margin: 0px 5px 0px 0px;
+        align-items: center;
+        width: 50%;
+        padding: 10px;
+        overflow: hidden;
+      }
+
+      main {
+        display: flex;
+        background-color: #49beb7;
+        align-items: center;
+        justify-content: space-around;
+        width: 70%;
+      }
+
+      .images {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        width: 50%;
+      }
+
+      .pushpaw,
+      .frank,
+      .manhog,
+      .fran,
+      .moonface,
+      .plentitude {
+        height: 30%;
+        width: 20vw;
+        object-fit: cover;
+        vertical-align: bottom;
+      }
+
+      footer {
+        display: flex;
+        background-color: #f5e1da;
+        /*height: 40%;*/
+        height: 10vh;
+        line-height: 40%;
+        align-items: center;
+        justify-content: center;
+        margin: 5px 0px 0px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-bottom-flex">
+      <header>
+        <img
+          src="./assets/frank-header.jpeg"
+          alt="Frank header"
+          class="frank-header"
+        />
+        <div>Meet Frank!</div>
+      </header>
+      <section class="left-right-flex">
+        <aside>
+          These are just some of the fantastic characters invented by artist Jim
+          Woodring. Click on the images for a short biography.
+        </aside>
+        <main>
+          <section class="images">
+            <img src="./assets/frankyellow.png" alt="frank" class="frank" />
+            <img src="./assets/pushpaw.jpeg" alt="pushpaw" class="pushpaw" />
+            <img src="./assets/fran.png" alt="fran" class="fran" />
+            <img src="./assets/manhog.jpeg" alt="manhog" class="manhog" />
+            <img
+              src="./assets/plentitude.jpeg"
+              alt="plentitude"
+              class="plentitude"
+            />
+            <img src="./assets/moonface.jpeg" alt="moonface" class="moonface" />
+          </section>
+        </main>
+      </section>
+      <footer>
+        Visit the real Frank site&nbsp;
+        <a href="http://www.jimwoodring.com/" target="_blank" class="link"
+          >here</a
+        >
+      </footer>
+    </div>
+    <br />
+    <br />
+    <br />
+    <!--
+    <div class="column-container">
+      <div>box1</div>
+      <div class="row-container">
+        <div>box2</div>
+        <div>box3</div>
+      </div>
+    </div>-->
+  </body>
+</html>
